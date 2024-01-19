@@ -17,8 +17,7 @@
 	const queryImage = await loadImage('./assets/face1.jpeg');
 	
 	const controller = new Controller({});
-	await controller.setup(true);
-
+	await controller.setup(queryImage);
 
 	const result = await controller.faceMeshHelper.detect(queryImage);
 	console.log("result", result);
